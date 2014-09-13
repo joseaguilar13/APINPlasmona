@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/project_site_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <at.fhstp.wificompass.view.MultiTouchView
+        android:id="@+id/project_site_resultview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/project_site_background" />
+
+    <LinearLayout
+        android:id="@+id/project_site_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/project_site_start_wifiscan_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/project_site_start_scan" />
+
+        <Button
+            android:id="@+id/project_reset_dr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/project_reset_dr_text" />
+ />
+
+        <Button
+            android:id="@+id/project_site_step_detect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/project_site_start_step_detect" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp" >
+
+        <ToggleButton
+            android:id="@+id/project_site_toggle_autorotate"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textOff="Auto-rotate"
+            android:textOn="Auto-rotate" />
+        
+        
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <RadioButton
+            android:id="@+id/floor3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@color/popup_text" />
+
+        <RadioButton
+            android:id="@+id/floor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" 
+            android:textColor="@color/popup_text" />
+            
+        <RadioButton
+            android:id="@+id/floor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="0" 
+            android:textColor="@color/popup_text"/>
+          
+    </RadioGroup>
+
+   
+    
+    <CheckBox
+        android:id="@+id/checkWIFI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/linearLayout1"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:text="WiFi" 
+        android:textColor="@color/popup_text"/>
+
+    <CheckBox
+        android:id="@+id/checkBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkWIFI"
+        android:layout_alignBottom="@+id/checkWIFI"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/checkWIFI"
+        android:text="BT"
+        android:textColor="@color/popup_text" />
+    
+
+    <CheckBox
+        android:id="@+id/checkDR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBT"
+        android:layout_alignBottom="@+id/checkBT"
+        android:layout_toRightOf="@+id/checkBT"
+        android:text="DR" 
+        android:textColor="@color/popup_text"
+        
+        
+        
+        />
+    
+          <CheckBox
+            android:id="@+id/checkLogText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/project_test"
+            android:layout_marginTop="16dp"
+            android:text="Log" />
+
+<!--     <Button -->
+<!--         android:id="@+id/project_test" -->
+<!--         style="?android:attr/buttonStyleSmall" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_alignLeft="@+id/radioGroup1" -->
+<!--         android:layout_below="@+id/radioGroup1" -->
+<!--         android:layout_marginTop="14dp" -->
+<!--         android:text="Test" /> -->
+
+   
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+        </ListView>
+
+</RelativeLayout>
